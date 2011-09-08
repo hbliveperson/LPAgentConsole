@@ -5,8 +5,11 @@ PORT = process.env.C9_PORT;
 var http = require('http');
 
 http.createServer(function(request, response) {
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-    response.end('Hello World\n');
-}).listen(process.env.C9_PORT, '0.0.0.0');
+    response.writeHead(200, {
+        'Content-Type': 'text/plain',
+        'Access-Control-Allow-Origin': '*'
+    });
+    response.end(JSON.stringify({status: 'success'}));
+}).listen(PORT, HOST);
 
-console.log('Server running.');
+console.log('Server running on ' + HOST + ' on port ' + PORT);
