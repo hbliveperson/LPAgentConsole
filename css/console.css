@@ -1,0 +1,18 @@
+.hidden {
+    display: none;
+}
+
+ul, ol, li {
+    list-style: none;
+    padding: 0px;
+}
+
+.menu {
+    float: none;
+    position: absolute;
+}
+
+.menu li {
+    display: list-item;
+    float: none;
+}

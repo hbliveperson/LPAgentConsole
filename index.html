@@ -1,13 +1,84 @@
 <html>
 <head>
-    <link rel='stylesheet' href='console.css' type='text/css' />
-    <script type='text/javascript' src='jquery-1.6.3.min.js'></script>
-    <script type='text/javascript' src='console.js'></script>
+    <link rel='stylesheet' href='css/console.css' type='text/css' />
+    <link rel='stylesheet' href='css/jquery-ui-1.8.16.custom.css' type='text/css' />
+    <script type='text/javascript' src='js/jquery-1.6.3.min.js'></script>
+    <script type='text/javascript' src='js/jquery-ui-1.8.16.custom.min.js'></script>
+    <script type='text/javascript' src='js/console.js'></script>
     <title>Agent Console</title>
 </head>
 <body>
+    <div>
+        <ul id='menuBar'>
+            <li>
+                <button>File</button>
+                <ul class='menu'>
+                    <li id='menuLogOn'>Log On...</li>
+                    <li id='menuLogOff'>Log Off</li>
+                    <li id='menuChangeState'>Change State...</li>
+                    <li class='menuBreak'></li>
+                    <li id='menuPreferences'>Preferences...</li>
+                    <li id='menuUserInfo'>User Information...</li>
+                    <li class='menuBreak'></li>
+                    <li id='menuExit'>Exit</li>
+                </ul>
+            </li>
+            <li>
+                <button>Control</button>
+                <ul class='menu'>
+                    <li id='menuTakeNext'>Take Next Chat/Call</li>
+                    <li id='menuTake'>Take Chat/Call<li>
+                    <li id='menuRespondNext'>Respond To Next Chat/Call</li>
+                    <li class='menuBreak'></li>
+                    <li id='menuInviteChat'>Invite To Chat</li>
+                </ul>
+            </li>
+            <li>
+                <button>View</button>
+                <ul class='menu'>
+                    <li>Test Entry 1</li>
+                    <li>Test Entry 2</li>
+                    <li>Test Entry 3</li>
+                    <li class='menuBreak'></li>
+                    <li>Test Entry 4</li>
+                </ul>
+            </li>
+            <li>
+                <button>Tools</button>
+                <ul class='menu'>
+                    <li>Test Entry 1</li>
+                    <li>Test Entry 2</li>
+                    <li>Test Entry 3</li>
+                    <li class='menuBreak'></li>
+                    <li>Test Entry 4</li>
+                </ul>
+            </li>
+            <li>
+                <button>Canned</button>
+                <ul class='menu'>
+                    <li>Test Entry 1</li>
+                    <li>Test Entry 2</li>
+                    <li>Test Entry 3</li>
+                    <li class='menuBreak'></li>
+                    <li>Test Entry 4</li>
+                </ul>
+            </li>
+            <li>
+                <button>Help</button>
+                <ul class='menu'>
+                    <li>Test Entry 1</li>
+                    <li>Test Entry 2</li>
+                    <li>Test Entry 3</li>
+                    <li class='menuBreak'></li>
+                    <li>Test Entry 4</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--
     User: <input type='text' id='loginUser' /><br />
     Pass: <input type='text' id='loginPass' /><br />
     <input type='button' value='Submit' id='loginSubmit' />
+    -->
 </body>
 </html>

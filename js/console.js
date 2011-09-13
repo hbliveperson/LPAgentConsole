@@ -1,5 +1,3 @@
-console.log('console.js is here');
-
 $(document).ready(function(){
     $('#loginSubmit').click(function formSubmit(){
         $.ajax({
@@ -19,4 +17,21 @@ $(document).ready(function(){
             }
         });
     });
+    
+    // JQuery Initialization
+    $('button, .menu li').button();
+    $('.menu').addClass('ui-helper-hidden');
+    
+    // Setup menu buttons
+    $('#menuBar > li').css('float', 'left')
+    .children('button').click(function menuButtonClick() {
+        var list = $( this ).next();
+        
+        if (list.hasClass('ui-helper-hidden')) {
+            list.removeClass('ui-helper-hidden');
+        } else {
+            list.addClass('ui-helper-hidden');
+        }
+    });
+    
 });
