@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function documentReady() {
     $('#loginSubmit').click(function formSubmit(){
         $.ajax({
             cache: false,
@@ -19,19 +19,41 @@ $(document).ready(function(){
     });
     
     // JQuery Initialization
-    $('button, .menu li').button();
+    $('#menuBar > li > button').button().css('margin', 0);
+    $('.menu li:not(.menuBreak)').button();
     $('.menu').addClass('ui-helper-hidden');
     
     // Setup menu buttons
     $('#menuBar > li').css('float', 'left')
-    .children('button').click(function menuButtonClick() {
-        var list = $( this ).next();
+        .children('button').click(function menuButtonClick() {
+            var list = $(this).next();
+            
+            if (list.hasClass('ui-helper-hidden')) {
+                list.removeClass('ui-helper-hidden');
+            } else {
+                list.addClass('ui-helper-hidden');
+            }
+        });
+    $('#menuLogOn').click(function() {
+        $('#dialogLogin').dialog('open');
+    });
         
-        if (list.hasClass('ui-helper-hidden')) {
-            list.removeClass('ui-helper-hidden');
-        } else {
-            list.addClass('ui-helper-hidden');
+    // Dialogs
+    $('#dialogLogin').dialog({
+        autoOpen: false,
+        height: 300,
+        width: 300,
+        modal: true,
+        buttons: {
+            'OK': function() {
+                $(this).dialog('close');
+            },
+            'Cancel': function() {
+                $(this).dialog('close');
+            }
+        },
+        close: function() {
+            
         }
     });
-    
 });

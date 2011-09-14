@@ -4,7 +4,7 @@
 
 ul, ol, li {
     list-style: none;
-    padding: 0px;
+    padding: 0;
 }
 
 .menu {
@@ -15,4 +15,13 @@ ul, ol, li {
 .menu li {
     display: list-item;
     float: none;
+}
+
+fieldset {
+    padding: 0;
+    border: 0;
+}
+
+label, input {
+    display: block;
 }
