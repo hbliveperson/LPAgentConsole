@@ -1,5 +1,7 @@
 HOST = '0.0.0.0';
 PORT = process.env.C9_PORT;
+LP_ACCOUNT = 'P15676777';
+LP_VERIFICATION = '05fa006e58684a4791dfe06a10f05cd2;5da31193a6090169';
 
 // Load the http module to create an http server.
 var http = require('http');
@@ -27,3 +29,7 @@ http.createServer(function(request, response) {
 }).listen(PORT, HOST);
 
 console.log('Server running on ' + HOST + ' on port ' + PORT);
+
+function signOAUTHRequest() {
+    
+}
